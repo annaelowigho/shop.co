@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-        <div className='bg-[#f2f0f1] md:bg-[url(/assets/hero-bg.svg)] w-full h-[853px] md:h-[550px] xl:h-[663px] bg-contain bg-center
+        <div className='bg-[#f2f0f1] md:bg-[url(/assets/hero-bg.svg)] w-full h-[853px] md:h-[500px] xl:h-[663px] bg-contain bg-center
         bg-no-repeat md:flex items-start'>
             <div className='px-[16px] md:w-1/2 xl:pl-[100px] pt-[40px] md:pt-[70px] xl:pt-[101px]'>
                 <h1 className='text-[36px] font-black font-primary leading-[35px]
@@ -35,6 +35,13 @@ const Hero = () => {
                 <img src="/assets/big-twink.svg" alt="" className='absolute left-[300px] top-[40px] w-[76px] h-[76px]'/>
                 <img src="/assets/small.svg" alt="" className='w-full h-[448px] md:hidden'/>
             </div>
+        </div>
+        <div className='bg-black  w-full h-[110px] mt-16 flex flex-wrap items-center justify-around px-5 md:mt-0'>
+            <img src="/assets/versace.svg" alt="" className='w-[116px] xl:w-[166.48px]'/>
+            <img src="/assets/zara.svg" alt="" className='w-[63.81px] xl:w-[91px]'/>
+            <img src="/assets/gucci.svg" alt="" className='w-[109.39px] xl:w-[156px]'/>
+            <img src="/assets/prada.svg" alt="" className='w-[127px] xl:w-[194px]'/>
+            <img src="/assets/ck.svg" alt="" className='w-[134.84px] xl:w-[206.79px]'/>
         </div>
     </>
   )
