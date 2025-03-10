@@ -2,12 +2,12 @@ import React from 'react'
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa6";
 
-const Products = () => {
+const Products = ({image, title, price}) => {
   return (
     <>
         <div className='pl-[16px] font-primary md:px-[50px] xl:px-[100px]'>
             <div className='bg-[#f1eeec] w-[198px] h-[200.01px] p-8 rounded-2xl md:w-[295px] md:h-[298px]'>
-                <img src="/assets/shirt-removebg-preview.png" alt="" className=''/>
+                <img src={image} alt="" className=''/>
             </div>
             <p className='font-primary text-[14px] font-bold md:pt-[16px] md:text-[16px]'>T-shirt with Tape Details</p>
             <div className='pt-[4.25px] flex md:pt-[8px]'>

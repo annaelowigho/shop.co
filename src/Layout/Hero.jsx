@@ -42,6 +42,7 @@ const Hero = () => {
             <img src="/assets/gucci.svg" alt="" className='w-[109.39px] xl:w-[156px]'/>
             <img src="/assets/prada.svg" alt="" className='w-[127px] xl:w-[194px]'/>
             <img src="/assets/ck.svg" alt="" className='w-[134.84px] xl:w-[206.79px]'/>
+            
         </div>
     </>
   )
