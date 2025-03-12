@@ -14,7 +14,7 @@ const Nav = () => {
         </div>
         <div className='px-[16px] py-[20px] flex items-center justify-between xl:justify-around xl:px-[117px] xl-pt-[28px] xl:pb-[20px]'>
             <div className='flex items-center gap-[16px]'>
-                <IoMenu className='xl:hidden w-[24px] h-[24px] border-[1px] border-black'/>
+                <IoMenu className='xl:hidden w-[24px] h-[24px] border-[1px] border-black'/> 
                 <img src="/assets/SHOP.CO.svg" alt="" className='md:w-[160px] md:h-[22px]'/>
             </div>
             <div className='hidden xl:block'>
