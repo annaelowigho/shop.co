@@ -10,7 +10,7 @@ const Hero = () => {
                 xl:text-[64px] xl:leading-[70px]'>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
                 <p className='font-secondary pt-[16px] w-[356px] text-[14px] text-[gray] pb-[14px]
                 xl:w-[545px] xl:text-[16px] xl:pt-[32px] xl:pb-[32px]'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
-                <button className='w-full bg-black h-[62px] rounded-full text-white text-[16px] font-medium font-primary hover:text-[#F0F0F0] hover:bg-[red] cursor-pointer
+                <button className='w-full bg-black h-[62px] rounded-full text-white text-[16px] font-medium font-primary hover:text-[#F0F0F0] hover:bg-red-600 cursor-pointer
                 lg:w-[210px]'>Shop Now</button>
                 <div className='pt-[20px] px-[56px] flex justify-between pb-[30px] flex-wrap items-center
                 lg:pt-[48px] lg:px-[0px] lg:w-[596px]'>
@@ -33,7 +33,7 @@ const Hero = () => {
             <div className='relative '>
                 <img src="/assets/small-twink.svg" alt="" className='absolute top-[130px] left-[20px] w-[44px] h-[44px]'/>
                 <img src="/assets/big-twink.svg" alt="" className='absolute left-[300px] top-[40px] w-[76px] h-[76px]'/>
-                <img src="/assets/small.svg" alt="" className='w-full h-[448px] md:hidden'/>
+                <img src="/assets/small.svg" alt="" className='w-full h-[443px] md:hidden'/>
             </div>
         </div>
         <div className='bg-black  w-full h-[110px] mt-16 flex flex-wrap items-center justify-around px-5 md:mt-0'>

@@ -9,37 +9,54 @@ import { useState, useEffect } from 'react';
 
 const Homepage = () => {
   const [products, setProducts] = useState([]);
+  const [viewAll, setViewAll] = useState(false)
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('https://dummyjson.com/products/4');
+        const res = await fetch('https://dummyjson.com/products?limit=4');
         const data = await res.json();
-        setProducts(data.products); // Ensure you set the correct structure
+        setProducts(data.products);
+
+        console.log(data)
+        // setProducts([data])
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     };
 
     fetchProducts();
-  }, []);
+
+    if (viewAll) {
+
+      fetchProducts(12)
+    }
+  }, [viewAll]);
 
 
   return (
     <>
         <Hero />
-        <div className='pt-[50px] md:pt-[72px]'>
+
+        {/* New Arrivals */}
+        <div className='pt-[50px] md:pt-[72px] px-4 md:px-6 xl:px-[100px]'>
           <h1 className='text-center text-[32px] font-black font-primary md:text-[48px] pb-[32px] md:pb-[52px]'>NEW ARRIVALS</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 px-6">
-          {products.map((product) => (
-            <Products 
-              key={product.id} 
-              image={product.thumbnail} 
-              title={product.title} 
-              price={product.price} 
-            />
-          ))}
-        </div>
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide xl:justify-between">
+            {products.map((product) => (
+              <Products 
+                key={product.id} 
+                image={product.thumbnail} 
+                title={product.title} 
+                price={product.price} 
+                rating={product.rating}
+              />
+            ))}
+          </div>
+          <div className='flex items-center justify-center pt-[36px] pb-[40px] md:pb-[64px]'>
+            <button className='border-[1px] border-[#eeefee] p-3 w-full rounded-full md:w-[218px] h-[52px] font-medium 
+            hover:bg-red-600 hover:text-white cursor-pointer active:bg-' onClick={() => setViewAll(true)}>View All</button>
+          </div>
+          <hr className='border-[#eeefee]'/>
         </div>
     </>
   )
